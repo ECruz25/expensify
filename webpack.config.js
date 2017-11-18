@@ -19,6 +19,7 @@ module.exports = env => {
           exclude: /node_modules/
         },
         {
+          test: /\.s?css$/,
           use: CSSExtract.extract({
             use: [
               {
@@ -34,8 +35,7 @@ module.exports = env => {
                 }
               }
             ]
-          }),
-          test: /\.s?css$/
+          })
         }
       ]
     },
